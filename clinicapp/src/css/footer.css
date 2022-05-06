@@ -125,11 +125,14 @@
     justify-self: start;
     margin-left: 20px;
     cursor: pointer;
-    text-decoration: none;
     font-size: 2rem;
     display: flex;
     align-items: center;
     margin-bottom: 16px;
+  }
+
+  .social-logo:hover{
+    text-decoration: none;
   }
   
   .website-rights {

@@ -14,7 +14,7 @@ import React from 'react';
 import '../css/button.css';
 import { Link } from 'react-router-dom';
 
-const STYLES = ['btn--primary', 'btn--outline', 'btn--test'];
+const STYLES = ['btn--primary', 'btn--outline', 'btn--register'];
 
 const SIZES = ['btn--medium', 'btn--large'];
 
@@ -30,9 +30,9 @@ export const Button = ({
     : STYLES[0];
 
   const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
-
+  if(checkButtonStyle === 'btn--register')
   return (
-    <Link to='/sign-up' className='btn-mobile'>
+    <Link to='/register'>
       <button
         className={`${checkButtonStyle} ${checkButtonSize}`}
         onClick={onClick}
@@ -42,4 +42,17 @@ export const Button = ({
       </button>
     </Link>
   );
+  else
+  return (
+    <Link to='/'>
+      <button
+        className={`${checkButtonStyle} ${checkButtonSize}`}
+        onClick={onClick}
+        type={type}
+      >
+        {children}
+      </button>
+    </Link>
+  );
+
 };

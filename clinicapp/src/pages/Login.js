@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { GoogleLogin, GoogleLogout } from 'react-google-login';
+import { Link } from 'react-router-dom';
 import '../css/login.css'
 const clientId = "254121591142-79r0nem4b0hmgfv06guu75lj0oslcefk.apps.googleusercontent.com";
 
@@ -54,12 +55,12 @@ function Login() {
                     <input type="text" class="signup-input" placeholder="Eg: thinh123"></input>
                     <label for="password" class="signup-label">Password</label>
                     <input type="password" class="signup-input" placeholder="Input your password"></input>
-                    <button class="signup-submit">Sign up</button>
+                    <button class="signup-submit">Login</button>
                 </form>
                 
                 <p class="signup-already">
                     <span>Already have an account ?</span>
-                    <a href="#" class="signup-login-link">Login</a>
+                    <Link to='/register' class="signup-login-link">Sign up</Link>
                 </p>
             </div>
         </div>  

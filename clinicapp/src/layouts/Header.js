@@ -38,8 +38,18 @@ function Navbar() {
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li className='nav-item'>
               <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-                Home
+              <i class="fas fa-home" style={{marginBottom:"7px", paddingRight:"3px"}}/>
+                Trang Chủ
               </Link>
+            </li>
+            <li className='nav-item'>
+              <a
+                href="#book"
+                className='nav-links'
+              >
+              <i class="fas fa-file-signature" style={{marginBottom:"3px", paddingRight:"3px"}} />
+                Đăng Kí Lịch Khám
+              </a>
             </li>
             <li className='nav-item'>
               <Link
@@ -47,20 +57,22 @@ function Navbar() {
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
-                Services
+                <i class="fa-solid fa-users-line" style={{marginBottom:"3px", paddingRight:"3px"}} />
+                Về Chúng Tôi
               </Link>
             </li>
             <li className='nav-item'>
               <Link
-                to='/products'
+                to='/login'
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
-                Products
+              <i class="fa-solid fa-right-to-bracket" style={{marginBottom:"3px", paddingRight:"3px"}} />
+                Đăng Nhập
               </Link>
             </li>
           </ul>
-          {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
+          {button && <Button buttonStyle='btn--register'>ĐĂNG KÍ</Button>}
         </div>
       </nav>
     </>
