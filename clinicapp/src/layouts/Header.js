@@ -29,7 +29,7 @@ function Navbar() {
       <nav className='navbar'>
         <div className='navbar-container'>
           <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-            TRVL
+            PMOU
             <i class='fab fa-typo3' />
           </Link>
           <div className='menu-icon' onClick={handleClick}>
@@ -52,14 +52,13 @@ function Navbar() {
               </a>
             </li>
             <li className='nav-item'>
-              <Link
-                to='/services'
+              <a
+                href='#about'
                 className='nav-links'
-                onClick={closeMobileMenu}
               >
                 <i class="fa-solid fa-users-line" style={{marginBottom:"3px", paddingRight:"3px"}} />
                 Về Chúng Tôi
-              </Link>
+              </a>
             </li>
             <li className='nav-item'>
               <Link

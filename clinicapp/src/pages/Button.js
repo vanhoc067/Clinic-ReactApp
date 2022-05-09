@@ -42,6 +42,18 @@ export const Button = ({
       </button>
     </Link>
   );
+  else if(checkButtonStyle === 'btn--about')
+  return (
+    <a  href="#book">
+      <button
+        className={`${checkButtonStyle} ${checkButtonSize}`}
+        onClick={onClick}
+        type={type}
+      >
+        {children}
+      </button>
+    </a>
+  );
   else
   return (
     <Link to='/'>
@@ -54,5 +66,6 @@ export const Button = ({
       </button>
     </Link>
   );
+
 
 };
