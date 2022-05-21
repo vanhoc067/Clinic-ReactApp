@@ -1,11 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import '../App.css';
 import { Button } from './Button';
 import '../css/home.css';
 import Cards from './Cards';
-import { Col, Row, Image } from 'react-bootstrap';
+import ScrollToTop from './GoToTop';
+import { Col, Row, Image } from 'react-bootstrap';import { UserContext } from '../App';
+import Examination from './Examination';
 
 function Home() {
+  const [user,dispatch] = useContext(UserContext)
+
+  let form = <Examination />
+  
+if(user == null) {
+  form = null
+}
+
   return (
       <>
         <div className='hero-container'>
@@ -22,37 +32,16 @@ function Home() {
             </Button>
             <Button
               className='btns'
-              buttonStyle='btn--about'
+              buttonStyle='btn--medicine'
               buttonSize='btn--large'
               onClick={console.log('hey')}
             >
-              WATCH US <i className='far fa-play-circle' />
+              OUR MEDICINE <i className='far fa-play-circle' />
             </Button>
           </div>
         </div>
 
-        <section class="book" id="book">
-            <h1 class="heading"> <span>Đặt lịch khám</span> ngay </h1>    
-            <div class="row">
-              <Row>
-                 <Col md={4} xs={12}>
-                    <div class="image">
-                        <img src="https://res.cloudinary.com/duxlhasjq/image/upload/v1651900869/publicdomainq-doc2_ilwygi.svg" alt=""/>
-                    </div>
-                 </Col>
-                 <Col md={7} xs={12}>
-                    <form action="">
-                        <h3>Hẹn lịch khám</h3>
-                        <input type="text" placeholder="name.." class="box"/>
-                        <input type="number" placeholder="number phone.." class="box"/>
-                        <input type="email" placeholder="email.." class="box"/>
-                        <input type="date" class="box"/>
-                        <input type="submit" value="Đặt lịch ngay" class="btn"/>
-                    </form>
-                  </Col>
-                </Row>
-            </div>
-        </section>
+        {form}
         <section class="about" id="about">
             <h1 class="heading"> <span>giới thiệu</span> về chúng tôi </h1>
             <div class="row">
@@ -95,10 +84,14 @@ function Home() {
                 <p>nhiều chi nhánh trên cả nước</p>
             </div>
         </section>
-
-        <Cards />
+        
+        <div id="doctor">
+         <Cards />
+        </div>
+        <ScrollToTop />
 </>
   );
 }
+
 
 export default Home;

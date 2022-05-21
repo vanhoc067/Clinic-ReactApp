@@ -19,7 +19,7 @@ function Cards() {
             <CardItem
               src='/images/Doctor7.jpg'
               position='Chức vụ: Phó khoa'
-              text='Bác sĩ Diamond từng học và được cấp bằng bởi Đại học Cornell University, Mỹ - đại học danh tiếng và quy mô bậc nhất.'
+              text='Bác sĩ Diamond từng học và được cấp bằng bởi Đại học Cornell University, Mỹ - đại học danh tiếng và quy mô bậc nhất nước Mỹ.'
               label='Bác sĩ: Diamond'
             />
           </ul>
@@ -32,7 +32,7 @@ function Cards() {
             />
             <CardItem
               src='/images/Doctor4.jpg'
-              position='Chức vụ: Tiến sĩ y khoa'
+              position='Chức vụ: Tiến sĩ'
               text='Tiến sĩ y khoa Alexandra, có rất nhiều thanh tựu trong nghề.'
               label='Tiến sĩ: Alexandra'
             />

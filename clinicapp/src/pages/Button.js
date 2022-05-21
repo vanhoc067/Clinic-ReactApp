@@ -14,7 +14,7 @@ import React from 'react';
 import '../css/button.css';
 import { Link } from 'react-router-dom';
 
-const STYLES = ['btn--primary', 'btn--outline', 'btn--register'];
+const STYLES = ['btn--primary', 'btn--outline', 'btn--register', 'btn--medicine'];
 
 const SIZES = ['btn--medium', 'btn--large'];
 
@@ -53,6 +53,18 @@ export const Button = ({
         {children}
       </button>
     </a>
+  );
+  else if(checkButtonStyle === 'btn--medicine')
+  return (
+    <Link to='/medicine'>
+      <button
+        className={`${checkButtonStyle} ${checkButtonSize}`}
+        onClick={onClick}
+        type={type}
+      >
+        {children}
+      </button>
+    </Link>
   );
   else
   return (

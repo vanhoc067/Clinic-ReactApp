@@ -1,0 +1,11 @@
+.button-thanh-toan {
+    display: flex;
+    margin-top: 40px;
+    justify-content: center;
+    align-items: center;
+}
+.thanh-toan {
+    margin:20px;
+    color:white;
+    border:none;
+}
